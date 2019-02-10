@@ -41,6 +41,14 @@
     --font-heading: Lilita One,cursive;    /* KATY NEEDS TO ADD -import from google fonts */
   }
 
+  @media screen and (min-width: 800px) {    /* KATY NEEDS TO ADD */
+    :root {
+        --font-size-page-title: 80px;
+        --font-size-section-title:48px;
+    }
+  }
+
+
 
 /* -------------------------------- GLOBAL DEAFULTS  */
 
@@ -122,6 +130,7 @@ header {
 
 header .layout-wide{
     overflow: hidden;
+    margin-bottom: 0; /* KATY NEEDS TO ADD */
 }
 
 .logo-wrapper {
@@ -139,7 +148,67 @@ header .layout-wide{
 }
 
 /* -------------------------------- NAVAGATION */
+/*_________KATY NEEDS TO ADD _________*/
+.navigation {
+    background-color: var(--alternative-bg-color);
+    position: sticky;
+    top: 0;
+}
 
+.nav-prompt {
+    width: 100%;
+    background-color: var(--alternative-bg-color);
+    color: var(--alternative-text-color);
+    padding-top: var(--padder);
+    padding-bottom: var(--padder);
+    border: none;
+    border-top: 1px solid #000000;
+}
+
+.nav-inner ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.nav-inner a {
+    color: var(--alternative-text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-top: var(--spacer);
+    padding-bottom: var(--spacer);
+
+    display: block;
+}
+
+@media screen and (min-width: 800px) {
+
+    .nav-prompt{
+        display: none;
+    }
+
+    .nav-inner ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:800px) {
+
+    .nav-inner {
+        overflow: hidden;
+        transaction: var(--transition-time) ease-in-out;
+    }
+
+    .nav-inner[aria-expanded="false"] {
+        max-height: 0;
+    }
+    
+    nav.inner[ aria-expanded="true"]{
+        max-height: 100vh;
+    }
+}
 
 
 /* -------------------------------- FOOTER */
