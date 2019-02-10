@@ -92,7 +92,7 @@ a{
 }
 
 a:hover {
-    color: var(--strong-text-color);
+    color: var(--strong-text-color); 
 }
 /*_______________________________________*/
 
